@@ -2,7 +2,17 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(2, 2, 95);}
+    background-color: rgb(2, 2, 95);
+    user-select: none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
+}
+
+
 
 @media only screen and (max-width: 400px) {
     .middlescale {
@@ -14,7 +24,6 @@ body {
     src: url('DESIB___.TTF') format("truetype");}
 
 h1{
-    user-select: none;
     font-family: "fontimport";
     width:300px;
     font-size: 30px;
@@ -29,7 +38,6 @@ h1{
 
 .hint {
     width:20px;
-    user-select: none;
     font-family: "fontimport";
     font-size: 20px;
     color: white;
@@ -184,8 +192,7 @@ button:hover {
     max-width: 1000px;
     height:500px;
     margin-top: 50px;
-    margin: auto;
-    user-select: none;}
+    margin: auto;}
 
 .clicked {
     transition: .1s 0s linear;
@@ -338,5 +345,7 @@ button:hover {
 
 .streak {
     font-size: 15px;}
+
+
 
 
