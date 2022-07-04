@@ -1,0 +1,342 @@
+body {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(2, 2, 95);}
+
+@media only screen and (max-width: 400px) {
+    .middlescale {
+      transform: scale(.6);
+      margin-right: 180px;}}
+
+@font-face {
+    font-family: "fontimport";
+    src: url('DESIB___.TTF') format("truetype");}
+
+h1{
+    user-select: none;
+    font-family: "fontimport";
+    width:300px;
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin:auto;
+    height: 35px;
+    text-align: center;
+    padding-bottom: 5px;
+    border-radius: 25px;}
+
+.hint {
+    width:20px;
+    user-select: none;
+    font-family: "fontimport";
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    position: relative;
+    margin-top: -28px;
+    margin-left: 30px;
+    height:45px;
+    text-align: center;}
+
+.hint:hover{
+     cursor: pointer;}
+
+.theman {
+    width: 100px;
+    height: 180px;
+    margin: 0 auto;}
+
+#lineone{
+    margin: 0 auto;
+    width: 160px;
+    height: 4px;
+    position: relative;
+    right: 58%;
+    top: 53%;
+    background-color: white;
+    transform: rotate(90deg);}
+
+#linetwo {
+    margin: 0 auto;
+    width: 45px;
+    height: 4px;
+    position: relative;
+    right: 6%;
+    top: 7.7%;
+    background-color: white;}
+
+#linethree{
+    margin: 0 auto;
+    width: 26px;
+    height: 4px;
+    position: relative;
+    right: -15%;
+    top: 13.5%;
+    background-color: white;
+    transform: rotate(90deg);}
+
+#head{
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgb(2, 2, 95);
+    border-radius: 50%;
+    position: relative;
+    right: -15%;
+    top: 20%;
+    border-radius: 50%;
+    background-color: white;}
+
+#body {
+    margin: 0 auto;
+    width: 42px;
+    height: 4px;
+    position: relative;
+    right: -15%;
+    top: 30%;
+    background-color: white;
+    transform: rotate(90deg);}
+
+#leftarm {
+    margin: 0 auto;
+    width: 26px;
+    height: 4px;
+    position: relative;
+    right: -5%;
+    top: 21.7%;
+    background-color: white;
+    transform: rotate(40deg);}
+
+#rightarm {
+    margin: 0 auto;
+    width: 26px;
+    height: 4px;
+    position: relative;
+    right: -25%;
+    top: 19.5%;
+    background-color: white;
+    transform: rotate(140deg);}
+
+#leftleg {
+    margin: 0 auto;
+    width: 26px;
+    height: 4px;
+    position: relative;
+    right: -4.5%;
+    top: 39%;
+    background-color: white;
+    transform: rotate(140deg);}
+
+#rightleg {
+    margin: 0 auto;
+    width: 26px;
+    height: 4px;
+    position: relative;
+    right: -25.5%;
+    top: 37%;
+    background-color: white;
+    transform: rotate(220deg);}
+
+.line {
+    opacity: 0;
+    transition: .5s 0s linear;}
+
+.middle {   
+    min-width: 400px;
+    max-width: fit-content;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 100;
+    line-height: 100px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;}
+
+button {
+    transition: .2s 0s linear;
+    background-color: rgb(110, 110, 188);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 30px;
+    width: 100px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 250;
+    border-radius: 50px;
+    font-family: "fontimport";
+    user-select: none;}
+
+button:hover {
+    transition: .1s 0s linear;
+    background-color: white;
+    color: black;}
+
+.bottom{
+    max-width: 1000px;
+    height:500px;
+    margin-top: 50px;
+    margin: auto;
+    user-select: none;}
+
+.clicked {
+    transition: .1s 0s linear;
+    background-color: white;
+    color: black;
+    scale: .9;}
+
+
+.letter {
+    min-width: 50px;
+    height: 80px;
+    margin: 15px;
+    border-bottom: 4px solid white;
+    font-size: 0px;
+    color: white;
+    margin-bottom: 50px;
+    font-family: "fontimport";
+    padding-bottom: 10px;}
+
+.revealed {
+    transition: .3s 0s linear;
+    font-size: 50px;}
+
+.displayman {
+    display: inherit;
+    opacity: 1;}
+
+.disabled {
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;}
+
+.gameover {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 10%;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 50px;
+    font-family: "fontimport";
+    font-size: 50px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;}
+
+.gameovershow {
+    z-index: 1;
+    transition: .4s 0s linear;
+    opacity: 1;}
+
+.gameoverhide {
+    z-index: -1;
+    transition: .1s 0s linear;
+    opacity: 0;}
+
+.realword {
+    color:black;}
+
+.lost{
+    color: black;}
+
+.wordwas {
+    color: white;}
+
+.loading {
+    margin-left: 35px;
+    width: 0%;
+    height: 15px;
+    background-color: white;
+    border-radius: 50px;}
+
+.loading2 {
+    margin-left: 35px;
+    width: 0%;
+    margin-top: -15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50px;}
+
+.loadinggo {
+    transition: 3s 0s linear;
+    width: 80%;}
+
+.winner {
+    background-color: green;
+    color: white;
+    width: 400px;
+    height: 300px;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    top: 10%;
+    border-radius: 50px;
+    font-family: "fontimport";
+    font-size: 90px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    opacity: 0;
+    z-index: -1;}
+
+.winnerclass {
+    z-index: 1;
+    transition: .4s 0s linear;
+    opacity: 1;}
+
+.nice {
+    margin-bottom: 50px;}
+
+
+
+.none{
+    pointer-events: none;}
+
+.hintword {
+    margin:0 auto;
+    font-family: "fontimport";
+    color: white;
+    width:0px;
+    transition: .2s 0s linear;
+    border: 2px solid white;
+    height: 0px;
+    position: absolute; 
+    font-size: 0px;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border-radius: 50px;
+    opacity: 0;}
+
+.hintopen {
+    opacity: 1;
+    transition: .15s 0s linear;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    font-size: 15px;
+    top: 65px;}
+
+.streak {
+    font-size: 15px;}
+
+
