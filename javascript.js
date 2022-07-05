@@ -11,6 +11,7 @@ let buttons = document.querySelectorAll('button');
 let winner = document.querySelector('.winner');
 let hint = document.querySelector('.hint');
 let streak = document.querySelector('.streak');
+let hintword = document.querySelector('.hintword');
 
 let winstreak = 0
 let total = 0
@@ -98,7 +99,6 @@ buttons.forEach(function(button) {
                 total += 1}})})
 
 hint.addEventListener('click', function b() {
-    window.hintword = document.querySelector('.hintword');
     if (hintword.classList.contains('hintopen')) {
         hintword.classList.remove('hintopen')
         return}
@@ -108,6 +108,8 @@ hint.addEventListener('click', function b() {
 })
 
 function gameovershow() {
+    theman.forEach(line => { line.classList.remove('displayman')})
+    buttons.forEach(button => { button.classList.remove('disabled')})
     winner.classList.remove('winnerclass')
     gameover.classList.remove('gameovershow')
     bottom.classList.remove('gameoverhide')
@@ -128,15 +130,15 @@ function gameoverhide(x) {
         winner.classList.add('winnerclass')
         loading2.classList.add('loadinggo')
     }
+    hintword.classList.remove('hintopen')
     hint.classList.add('gameoverhide')
-    window.hintword.classList.remove('hintopen')
     bottom.classList.add('gameoverhide')
     input.classList.add('gameoverhide')
     mandiv.classList.add('gameoverhide')
     h1.classList.add('gameoverhide')
-    theman.forEach(line => { line.classList.remove('displayman')})
-    buttons.forEach(button => { button.classList.remove('disabled')})
-    setTimeout(gameovershow, 3000)}
+    buttons.forEach(button => { button.classList.add('disabled')})
+    setTimeout(gameovershow, 2100)}
+
 
 
 
